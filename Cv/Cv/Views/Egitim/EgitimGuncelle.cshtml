@@ -1,0 +1,30 @@
+﻿@model Cv.Models.Entity.Egitim
+@{
+    ViewBag.Title = "EgitimGuncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h1>Eğitim Güncelle</h1>
+<br />
+<form method="post">
+    @Html.Label("Baslik")
+    @Html.TextBoxFor(x => x.Baslik, new { @class = ("form-control") })
+    <br />
+    @Html.Label("Altbaslik1")
+    @Html.TextBoxFor(x => x.Altbaslik1, new { @class = ("form-control") })
+    <br />
+    @Html.Label("altbaşlık2")
+    @Html.TextBoxFor(x => x.Altbaslik2, new { @class = ("form-control") })
+    <br />
+    @Html.Label("genel not ort")
+    @Html.TextBoxFor(x => x.GenelNotOrt, new { @class = ("form-control") })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = ("form-control") })
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>
+
+
+

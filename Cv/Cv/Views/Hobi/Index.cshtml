@@ -1,0 +1,21 @@
+﻿@using Cv.Models.Entity
+@model List<Hobi>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Hobilerim</h2>
+<form method="post">
+    @foreach (var x in Model)
+    {
+        <label>Açıklama</label>
+        <textarea rows="10" class="form-control" name="Aciklama1">@x.Aciklama1</textarea>
+        <br />
+        <label>Açıklama 2</label>
+        <textarea rows="10" class="form-control" name="Aciklama2">@x.Aciklama2</textarea>
+        <br />
+    }
+<br />
+    <button class="btn btn-primary">Güncelle</button>
+</form>

@@ -1,0 +1,43 @@
+﻿@model Cv.Models.Entity.Egitim
+@{
+    ViewBag.Title = "YetenekEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h1>Eğitim ekleme</h1>
+<br />
+<form method="post">
+    @Html.Label("başlık")
+    @Html.TextBoxFor(x => x.Baslik, new { @class = ("form-control") })
+    @Html.ValidationMessageFor(x => x.Baslik, "", new {@style="color:red" })
+     <div>
+        @*2.*@
+        <!--@if (ViewBag.d1 != null)
+    {
+        <br />
+        @Html.ValidationMessageFor(x => x.Baslik, "", new { @class = "alert alert-danger" })
+    }
+    <br />-->
+        @*
+        3.
+        @if (ViewBag.d1 != null)
+        {
+            <div class="alert alert-danger ">@ViewBag.d1 </div>
+        }*@
+    </div>
+    <br />
+    @Html.Label("altbaşlık")
+    @Html.TextBoxFor(x => x.Altbaslik1, new { @class = ("form-control") })
+    <br />
+    @Html.Label("altbaşlık2")
+    @Html.TextBoxFor(x => x.Altbaslik2, new { @class = ("form-control") })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = ("form-control") })
+    <br />
+    @Html.Label("Genel Not Ortalaması")
+    @Html.TextBoxFor(x => x.GenelNotOrt, new { @class = ("form-control") })
+    <br />
+    <button class="btn btn-info">Ekle</button>
+</form>

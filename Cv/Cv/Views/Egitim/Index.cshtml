@@ -1,0 +1,36 @@
+﻿@using Cv.Models.Entity
+@model List<Egitim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h1>Eğitim listesi</h1>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Başlık</th>
+        <th>Altbaşlık</th>
+        <th>Altbaşlık2</th>
+        <th>Genel Not Ort</th>
+        <th>Tarih</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td>@x.Baslik</td>
+            <td>@x.Altbaslik1</td>
+            <td>@x.Altbaslik2</td>
+            <td>@x.GenelNotOrt</td>
+            <td>@x.Tarih</td>
+            <td><a href="/Egitim/EgitimSil/@x.Id">Sil</a></td>
+            <td><a href="/Egitim/EgitimGuncelle/@x.Id">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Egitim/EgitimEkle/" class="btn btn-success">Ekle</a>

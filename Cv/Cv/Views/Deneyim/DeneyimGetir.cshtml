@@ -1,0 +1,41 @@
+﻿@model Cv.Models.Entity.Deneyimler
+@{
+    ViewBag.Title = "DeneyimGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h1>Deneyim Güncelle</h1>
+<br />
+<form method="post">
+    @Html.Label("Deneyim Id")
+    @Html.TextBoxFor(x => x.İd)
+    <br />
+    @Html.Label("Baslik")
+    @Html.TextBoxFor(x => x.Baslik, new { @class = ("form-control") })
+    <br />
+    @Html.Label("Altbaslik")
+    @Html.TextBoxFor(x => x.Altbaslik, new { @class = ("form-control") })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = ("form-control") })
+    <br />
+    @Html.Label("Aciklama")
+    @Html.TextBoxFor(x => x.Aciklama, new { @class = ("form-control") })
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

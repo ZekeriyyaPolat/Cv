@@ -1,0 +1,21 @@
+﻿@model Cv.Models.Entity.Sertifika
+@{
+    ViewBag.Title = "SertifikaGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h1>Sertifika Güncelle</h1>
+<br />
+<form method="post">
+
+    @Html.Label("Açıklama")
+    @Html.TextBoxFor(x => x.Aciklama, new { @class = ("form-control") })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = ("form-control") })
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>
+
+

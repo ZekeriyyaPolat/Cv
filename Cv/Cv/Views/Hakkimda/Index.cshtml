@@ -1,0 +1,33 @@
+﻿@using Cv.Models.Entity
+@model List<Hakkimda>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Hakkımda</h2>
+<form method="post">
+    @foreach (var x in Model)
+    {
+        <label>Ad</label>
+        <input type="text" name="Ad" value="@x.Ad" class="form-control" />
+        <br />
+        <label>Soyad</label>
+        <input type="text" name="Soyad" value="@x.Soyad" class="form-control" />
+        <br />
+        <label>Adres</label>
+        <input type="text" name="Adres" value="@x.Adres" class="form-control" />
+        <br />
+        <label>Mail</label>
+        <input type="text" name="Mail" value="@x.Mail" class="form-control" />
+        <br />
+        <label>Telefon</label>
+        <input type="text" name="Telefon" value="@x.Telefon" class="form-control" />
+        <br />
+        <label>Aciklama</label>
+        <input type="text" name="Aciklama" value="@x.Aciklama" class="form-control" />
+        <br />
+    }
+    <br />
+    <button class="btn btn-primary">Güncelle</button>
+</form>

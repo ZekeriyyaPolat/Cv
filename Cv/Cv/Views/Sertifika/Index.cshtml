@@ -1,0 +1,65 @@
+﻿@using Cv.Models.Entity
+@model List<Sertifika>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- /.col -->
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header p-2">
+
+                        </div><!-- /.card-header -->
+                        <div class="card-body">
+                            <div class="tab-pane" id="timeline">
+                                <!-- The timeline -->
+                                <div class="timeline timeline-inverse">
+                                    <!-- timeline time label -->
+                                    @foreach (var x in Model)
+                                    {
+                                        <div class="time-label">
+                                            <span class="bg-danger">
+                                               @x.Tarih
+                                            </span>
+                                        </div>
+                                        <!-- /.timeline-label -->
+                                        <!-- timeline item -->
+                                        <div>
+                                            @*<i class="fas fa-comment bg-primary"></i>*@
+                                            <div class="timeline-item">
+                                                @*<span class="time"><i class="far fa-clock"></i> 12:05</span>
+                                                    <h3 class="timeline-header"><a href="#">Support Team</a> sent you an email</h3>*@
+                                                <div class="timeline-body">
+                                                    @x.Aciklama
+                                                </div>
+                                                <div class="timeline-footer">
+                                                    <a href="/Sertifika/SertifikaGetir/@x.Id" class="btn btn-primary btn-sm">Düzenle</a>
+                                                    <a href="/Sertifika/SertifikaSil/@x.Id" class="btn btn-danger btn-sm">SİL</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    }
+                                </div>
+                                <a href="/Sertifika/YeniSertifika/" class="btn btn-success">Yeni sertifika Girişi</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+</body>
+</html>

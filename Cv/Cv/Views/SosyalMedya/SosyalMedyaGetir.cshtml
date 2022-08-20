@@ -1,0 +1,23 @@
+﻿@model Cv.Models.Entity.SosyalMedya
+@{
+    ViewBag.Title = "SosyalMedyaGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h1>Sosyal medya Güncelle</h1>
+<br />
+<form method="post">
+
+    @Html.Label("Ad")
+    @Html.TextBoxFor(x => x.Ad, new { @class = ("form-control") })
+    <br />
+    @Html.Label("Link")
+    @Html.TextBoxFor(x => x.Link, new { @class = ("form-control") })
+    <br />
+    @Html.Label("İkon")
+    @Html.TextBoxFor(x => x.İkon, new { @class = ("form-control") })
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>
+
